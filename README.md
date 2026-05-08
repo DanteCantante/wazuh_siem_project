@@ -14,7 +14,6 @@ This project demonstrates the deployment of a Wazuh SIEM (Security Information a
 The Wazuh Manager was deployed on a dedicated Ubuntu server. Following the setup, the Wazuh agent was installed and configured on the Parrot OS "victim" machine.
 
 ![Successful connection](https://github.com/user-attachments/assets/80455ae6-8c2d-47c0-babd-54fc7a58767f)
-*Figure 1: Successful connection of the Parrot OS agent (diogenes) to the Wazuh Manager.*
 
 ### 2. Manual Telemetry Generation (Sudo Failures)
 To test initial telemetry, I performed several failed `sudo` attempts on the Parrot OS machine. This simulates a user or an unauthorized person attempting to gain root access. Eventually I simulated a succesful login attempt. 
@@ -35,8 +34,11 @@ Using Hydra, I targeted the local SSH service on the Parrot OS machine to simula
 ### 4. SIEM Analysis & Detection
 The SIEM successfully captured the spike in traffic. The telemetry clearly shows the transition from normal background noise to a high-density event period.
 
-![Traffic Spike](https://github.com/user-attachments/assets/730a5a62-8c51-4c8c-bebf-dedb0d277f0e) ("https://github.com/user-attachments/assets/e68a1b26-f9f4-47a4-99a2-aee4afe77145) (https://github.com/user-attachments/assets/76af04f4-a784-4d45-b381-6ed4e82cd01b)
-*Figure 2: The Events Count Evolution graph showing a sharp spike during the Hydra attack.*
+![Traffic Spike](https://github.com/user-attachments/assets/730a5a62-8c51-4c8c-bebf-dedb0d277f0e) 
+
+(https://github.com/user-attachments/assets/3ffbcc8d-8b71-4b81-bc93-38c089cfef49)
+
+(https://github.com/user-attachments/assets/b88c2e00-457e-486f-b1fc-920435a8cc99)
 
 Wazuh mapped these events directly to the **MITRE ATT&CK** framework, specifically identifying **T1110 (Brute Force)** under the **Credential Access** tactic.
 
@@ -44,7 +46,6 @@ Wazuh mapped these events directly to the **MITRE ATT&CK** framework, specifical
 By inspecting the specific alerts, we can see the granularity of the detection. The SIEM identified "User missed the password more than one time" with a Level 10 severity rating.
 
 ![Event Details](https://github.com/user-attachments/assets/aeeec35f-510b-4aeb-8929-460c62672486)
-*Figure 3: Deep dive into Rule ID 2502, showing 17 fired times within a short window.*
 
 ---
 
