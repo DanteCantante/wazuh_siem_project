@@ -13,7 +13,7 @@ This project demonstrates the deployment of a Wazuh SIEM (Security Information a
 ### 1. Deployment and Agent Integration
 The Wazuh Manager was deployed on a dedicated Ubuntu server. Following the setup, the Wazuh agent was installed and configured on the Parrot OS "victim" machine.
 
-![Successful connection](<img width="2048" height="1280" alt="01" src="https://github.com/user-attachments/assets/80455ae6-8c2d-47c0-babd-54fc7a58767f"/>)
+![Successful connection](https://github.com/user-attachments/assets/80455ae6-8c2d-47c0-babd-54fc7a58767f)
 *Figure 1: Successful connection of the Parrot OS agent (diogenes) to the Wazuh Manager.*
 
 ### 2. Manual Telemetry Generation (Sudo Failures)
