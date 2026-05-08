@@ -32,13 +32,13 @@ Using Hydra, I targeted the local SSH service on the Parrot OS machine to simula
 ![Hydra Attack Execution](https://github.com/user-attachments/assets/408cbce8-ebad-4430-a11f-45a761b59b56)
 
 ### 4. SIEM Analysis & Detection
-The SIEM successfully captured the spike in traffic. The telemetry clearly shows the transition from normal background noise to a high-density event period.
+The SIEM successfully captured the spike in traffic. The telemetry shown in these three screenshots clearly show the transition from normal background noise to a high-density event period.
 
 ![Traffic Spike](https://github.com/user-attachments/assets/730a5a62-8c51-4c8c-bebf-dedb0d277f0e) 
 
-(https://github.com/user-attachments/assets/3ffbcc8d-8b71-4b81-bc93-38c089cfef49)
+![](https://github.com/user-attachments/assets/3ffbcc8d-8b71-4b81-bc93-38c089cfef49)
 
-(https://github.com/user-attachments/assets/b88c2e00-457e-486f-b1fc-920435a8cc99)
+![](https://github.com/user-attachments/assets/b88c2e00-457e-486f-b1fc-920435a8cc99)
 
 Wazuh mapped these events directly to the **MITRE ATT&CK** framework, specifically identifying **T1110 (Brute Force)** under the **Credential Access** tactic.
 
