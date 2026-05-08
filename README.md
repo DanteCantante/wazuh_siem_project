@@ -20,7 +20,7 @@ To test initial telemetry, I performed several failed `sudo` attempts on the Par
 
 | Action | Resulting Telemetry |
 | :--- | :--- |
-| **Failed Sudo** <br> ![Sudo Attempt](https://github.com/user-attachments/assets/84dee3d1-06ad-4fdb-bc4f-272e5b7e6625) | **Rule 5403:** First time user executed sudo <br> **Rule 5503:** User login failed <br> ![Telemetry Result](https://github.com/user-attachments/assets/1db59fe8-74e6-49d0-927e-99f0611a3140) |
+| **Failed Sudo** <br> ![Sudo Attempt](https://github.com/user-attachments/assets/84dee3d1-06ad-4fdb-bc4f-272e5b7e6625) | **Rule 5503:** User login failed <br> **Rule 5403:** First time user executed sudo <br> ![Telemetry Result](https://github.com/user-attachments/assets/1db59fe8-74e6-49d0-927e-99f0611a3140) |
 
 ### 3. Simulating a Brute Force Attack
 Using Hydra, I targeted the local SSH service on the Parrot OS machine to simulate a Credential Access attack.
@@ -34,11 +34,11 @@ Using Hydra, I targeted the local SSH service on the Parrot OS machine to simula
 ### 4. SIEM Analysis & Detection
 The SIEM successfully captured the spike in traffic. The telemetry shown in these three screenshots clearly show the transition from normal background noise to a high-density event period.
 
-![Traffic Spike](https://github.com/user-attachments/assets/730a5a62-8c51-4c8c-bebf-dedb0d277f0e) 
+![Traffic Spike](https://github.com/user-attachments/assets/730a5a62-8c51-4c8c-bebf-dedb0d277f0e) <br>
 
-![](https://github.com/user-attachments/assets/3ffbcc8d-8b71-4b81-bc93-38c089cfef49)
+![](https://github.com/user-attachments/assets/3ffbcc8d-8b71-4b81-bc93-38c089cfef49) <br>  
 
-![](https://github.com/user-attachments/assets/b88c2e00-457e-486f-b1fc-920435a8cc99)
+![](https://github.com/user-attachments/assets/b88c2e00-457e-486f-b1fc-920435a8cc99) <br>
 
 Wazuh mapped these events directly to the **MITRE ATT&CK** framework, specifically identifying **T1110 (Brute Force)** under the **Credential Access** tactic.
 
