@@ -23,7 +23,7 @@ To test initial telemetry, I performed several failed `sudo` attempts on the Par
 | **Failed Sudo** <br> ![Sudo Attempt](https://github.com/user-attachments/assets/84dee3d1-06ad-4fdb-bc4f-272e5b7e6625) | **Rule 5503:** User login failed <br> **Rule 5403:** First time user executed sudo <br> ![Telemetry Result](https://github.com/user-attachments/assets/1db59fe8-74e6-49d0-927e-99f0611a3140) |
 
 ### 3. Simulating a Brute Force Attack
-Using Hydra, I targeted the local SSH service on the Parrot OS machine to simulate a Credential Access attack.
+Using Hydra, I targeted the local SSH service on the Parrot OS machine to simulate a Credential Access attack. This was done from the Parot OS machine due to Hydra install errors in Ubuntu. 
 
 * **Preparation:** Configured and enabled the local SSH service.
 ![SSH Configuration](https://github.com/user-attachments/assets/72fca20d-e78a-4746-b65f-c500d40a4367)
